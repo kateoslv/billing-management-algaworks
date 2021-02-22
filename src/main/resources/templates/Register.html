@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.thymeleaf.org" >
 <head>
     <meta charset="UTF-8">
     <title>Register</title>
@@ -19,6 +19,10 @@
     </nav>
 
     <form class="form-horizontal" method="post" action="/accounts-receivable">
+
+        <div class="alert alert-success" th:if="${!#strings.isEmpty(message)}">
+            <span th:text="${message}">Saved successfully!</span>
+        </div>
 
         <div class="panel panel-default">
             <div class="panel-heading">
