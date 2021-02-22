@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.servlet.ModelAndView;
 
 @Controller
 @RequestMapping("/accounts-receivable")
@@ -21,11 +22,14 @@ public class AccountsReceivableController {
     }
 
     @RequestMapping(method = RequestMethod.POST)
-    public String save(AccountReceivableModel accountReceivable) {
+    public ModelAndView save(AccountReceivableModel accountReceivable) {
 
         accountsReceivable.save(accountReceivable);
 
-        return "Register";
+        ModelAndView modelAndView = new ModelAndView("Register");
+        modelAndView.addObject("message", "Saved successfully!");
+
+        return modelAndView;
     }
 
 }
