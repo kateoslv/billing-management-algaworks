@@ -39,6 +39,12 @@ public class AccountsReceivableController {
         return modelAndView;
     }
 
+    @RequestMapping
+    public String search() {
+
+        return "SearchAccountReceivable";
+    }
+
     @ModelAttribute("statusAccountReceivable")
     public List<Status> allAccountsReceivableStatus() {
 
