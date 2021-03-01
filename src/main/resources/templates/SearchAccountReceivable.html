@@ -1,24 +1,12 @@
 <!DOCTYPE html>
-<html lang="en" xmlns:th="http://www.thymeleaf.org" >
+<html lang="en" xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorator="StandardLayout">
 <head>
-    <meta charset="UTF-8">
     <title>Account receivable search</title>
-    <link rel="stylesheet" type="text/css" href="/css/bootstrap.min.css">
-    <link rel="stylesheet" type="text/css" href="/css/style.css">
 </head>
 
-<body>
-
-    <nav class="navbar navbar-inverse navbar-static-top">
-        <div class="container-fluid">
-            <div class="navbar-header">
-                <a class="navbar-brand" href="#">
-                    <img alt="Algaworks" src="/images/logo-algaworks.png">
-                </a>
-            </div>
-        </div>
-    </nav>
-
+<section layout:fragment="content">
     <div class="panel panel-default">
         <div class="panel-heading">
             <h1 class="panel-title">Account Receivable Search</h1>
@@ -44,8 +32,6 @@
             </table>
         </div>
     </div>
+</section>
 
-    <script src="/js/jquery-3.5.1.min.js"></script>
-    <script src="/js/bootstrap.min.js"></script>
-</body>
 </html>
